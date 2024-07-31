@@ -96,7 +96,7 @@
             var dishes = ``;
             total = tot;
             let le = document.getElementById("d0");
-            le.innerHTML = `<h1>Total: ${total} $</h1><br><button onclick='OnClickCheck(${-total})' id="re">重置</button>`;
+            le.innerHTML = `<h1>Total: ${total} $</h1><br><button onclick='window.location.replace("https://waipjy.github.io/caculator/");' id="re">重置</button>`;
             for (const [key, [value, count]] of Object.entries(dict)) {
                 dishes += `<button onclick='OnClickCheck(\"${key}\")'>${key}  ${value}元</button><h1>  *${count}<h1><br>`;
             }
