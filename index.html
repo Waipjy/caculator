@@ -20,24 +20,23 @@
         button {
             margin-top: 3vh;
             margin-left: 4vh;
-            width: 50vw;
-            height: 10vw;
-            font-size: 5vw;
+            width: 25vw;
+            height: 12vw;
+            font-size: 3.5vw;
             background: #ccc;
             font-family: "Noto Sans TC", sans-serif !important;
-            font-weight: 500;
+            font-weight: 200;
             border: 0 none;
             cursor: pointer;
             -webkit-border-radius: 5vw;
-            border-radius: 5vw;
+            border-radius: 4vw;
             display: inline;
-            text-align: end;
-            padding-right: 5vw;
+            text-align: center;
         }
         
         h1 {
             margin-left: 3vh;
-            font-size: 10vw;
+            font-size: 7vw;
             font-family: "Noto Sans TC", sans-serif !important;
             font-weight: 1000;
             display: inline;
@@ -64,7 +63,7 @@
             border: 0 none;
             border-radius: 1vw;
             display: inline;
-            text-align: right;
+            text-align: center;
         }
         
         h3 {
@@ -77,18 +76,58 @@
     </style>
     <script>
         var dict = {
-            "科學麵": [15, 0],
-            "王子麵": [15, 0],
-            "粄條": [20, 0],
-            "冬粉": [20, 0],
-            "蔬菜麵": [20, 0],
-            "烏龍麵": [20, 0],
-            "科學麵1": [15, 0],
-            "王子麵1": [15, 0],
-            "粄條1": [20, 0],
-            "冬粉1": [20, 0],
-            "蔬菜麵1": [20, 0],
-            "烏龍麵1": [20, 0],
+            "蒸煮麵": [20, 0],
+            "其他麵": [15, 0],
+            "菜類": [20, 0],
+            "菜三個": [50, 0],
+            "鳥蛋(3)": [10, 0],
+            "豬皮": [15, 0],
+            "鴨胗": [25, 0],
+            "大熱狗": [30, 0],
+            "德式香腸": [30, 0],
+            "鴨血(半)": [15, 0],
+            "豬肉片": [30, 0],
+            "豬耳朵": [35, 0],
+            "大腸": [35, 0],
+            "腱子肉": [35, 0],
+            "年糕(4)": [10, 0],
+            "竹輪": [15, 0],
+            "黑輪": [15, 0],
+            "豬血糕": [10, 0],
+            "小豆干(3)": [15, 0],
+            "蛋餃(3)": [15, 0],
+            "海帶(2)": [20, 0],
+            "甜不辣(2)": [15, 0],
+            "豆包": [20, 0],
+            "鱈魚燒": [20, 0],
+            "百頁": [20, 0],
+            "芋串": [20, 0],
+            "花干": [20, 0],
+            "黑豆干": [20, 0],
+            "糯米腸": [15, 0],
+            "蒟蒻絲(4)": [20, 0],
+            "大豆干": [25, 0],
+            "蝦捲": [25, 0],
+            "香魚捲": [20, 0],
+            "紅區(5)": [40, 0],
+            "綠區(5)": [40, 0],
+            "黃區(3)": [30, 0],
+            // "鑫鑫腸(5)": [40, 0],
+            // "燕餃(5)": [40, 0],
+            // "凍豆腐(5)": [40, 0],
+            // "油豆腐(5)": [40, 0],
+            // "蟹肉棒(5)": [40, 0],
+            // "小貢丸(5)": [40, 0],
+            // "水晶餃(5)": [40, 0],
+            // "鱈魚餃(5)": [40, 0],
+            // "魚豆腐(5)": [40, 0],
+            // "鱈魚丸(5)": [40, 0],
+            // "魚包蛋(3)": [30, 0],
+            // "香菇丸(3)": [30, 0],
+            // "花枝丸(3)": [30, 0],
+            // "起司燒(3)": [30, 0],
+            // "麻吉燒(3)": [30, 0],
+            // "龍蝦沙(3)": [30, 0],
         };
         var total = 0;
 
@@ -98,7 +137,7 @@
             let le = document.getElementById("d0");
             le.innerHTML = `<h1>Total: ${total} $</h1><br><button onclick='window.location.replace("https://waipjy.github.io/caculator/");' id="re">重置</button>`;
             for (const [key, [value, count]] of Object.entries(dict)) {
-                dishes += `<button onclick='OnClickCheck(\"${key}\")'>${key}  ${value}元</button><h1>  *${count}<h1><br>`;
+                dishes += `<button onclick='OnClickCheck(\"${key}\")'>${key} *${count}<br>${value}元</button>`;
             }
             let el = document.getElementById("d1");
             el.innerHTML = dishes;
